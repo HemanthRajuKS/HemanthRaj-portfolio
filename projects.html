@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Hemanth Raju K S</title>
+<meta name="description" content="Selected computer-vision and full-stack projects by Hemanth Raju K S.">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="brand"><span class="dot"></span>H.RAJU</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resume.html">Resume</a></li>
+  </ul>
+  <div class="nav-right">
+    <button id="modeToggle" onclick="toggleMode()">MODE: DARK</button>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:40px;">
+  <div class="wrap">
+    <span class="tag">// project_log — full record</span>
+    <h1 style="font-size:clamp(30px,4.5vw,44px); margin:16px 0 12px;">Every project starts as a detection problem.</h1>
+    <p class="hero-role">What to look for, what counts as a match, and how confident the system needs to be before it acts. Two systems below, one shipped to hardware, one published as research.</p>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="project-grid">
+
+      <div class="project-card reveal" onclick="showProjectDetails('Face Mask Detection & COVID Precaution System', 'Real-time CNN-based detection system built with OpenCV and TensorFlow/Keras, deployed via Flask on a Raspberry Pi. The webcam feed is scored frame-by-frame to classify whether a person is wearing a mask. When a bare face is detected, a COVID precaution module triggers an alert and displays safety guidelines. The model reached 95% accuracy on the held-out test dataset.', 'mask_detected · conf 95%')">
+        <div class="project-media">
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="detect-tag">mask_detected · 95%</span>
+          <img src="images/project-facemask.png" alt="Face mask detection system screenshot with bounding boxes">
+        </div>
+        <div class="project-body">
+          <span class="index">01 / cv system</span>
+          <h3>Face Mask Detection &amp; COVID Precaution System</h3>
+          <p>Real-time CNN detection deployed on Raspberry Pi, with an alert module for safety guidelines when a mask isn't detected.</p>
+          <div class="stack-row">
+            <span class="chip">OpenCV</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">Keras</span>
+            <span class="chip">CNN</span>
+            <span class="chip">Flask</span>
+            <span class="chip">Raspberry Pi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="showProjectDetails('Enhanced Dual-Stream Semantic Change Detection Model', 'A deep learning model combining CNN and Transformer architectures to detect change between paired satellite or aerial images — land-use shifts, urban growth, deforestation and more. Training and optimization on benchmark remote-sensing datasets improved detection accuracy over the baseline dual-stream approach, and the work was written up as a published research paper.', 'change_detected · dual-stream')">
+        <div class="project-media">
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="detect-tag">change_detected · dual-stream</span>
+          <img src="images/project-satellite.jpg" alt="Satellite imagery change detection comparison">
+        </div>
+        <div class="project-body">
+          <span class="index">02 / research</span>
+          <h3>Enhanced Dual-Stream Semantic Change Detection Model</h3>
+          <p>CNN + Transformer model for satellite image change detection, improved on benchmark datasets and published as a research paper.</p>
+          <div class="stack-row">
+            <span class="chip">Python</span>
+            <span class="chip">CNN</span>
+            <span class="chip">Transformer</span>
+            <span class="chip">Deep Learning</span>
+            <span class="chip">Remote Sensing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="showProjectDetails('FinSage AI', 'A personal finance advisor web app built for Indian users. Users enter income and expenses and get a full financial health report: savings-rate status, overspend warnings, SIP and investment suggestions, income-tax estimation for FY 24-25 under both regimes, EMI/debt burden checks, and a colour-coded budget breakdown. Full auth (register/login), a MySQL-backed dashboard, and a JSON API endpoint for the analysis engine, deployable to a standard PHP host.', 'analysis_complete · php + mysql')">
+        <div class="project-media">
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="detect-tag">analysis_complete</span>
+          <img src="images/project-finsage.svg" alt="FinSage AI dashboard mockup">
+        </div>
+        <div class="project-body">
+          <span class="index">03 / full-stack</span>
+          <h3>FinSage AI</h3>
+          <p>AI-assisted personal finance advisor for Indian users — SIP advice, tax estimation, EMI checks, colour-coded budget breakdown.</p>
+          <div class="stack-row">
+            <span class="chip">PHP</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">REST API</span>
+          </div>
+          <a class="more-link project-visit" href="http://chaitrafinanceadvisor.free.nf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Visit site ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" onclick="showProjectDetails('Make My Seat', 'A KCET (Karnataka CET) seat-allotment prediction platform, built as my capstone project during the frontend development internship at Technomedia Software Solutions. Students enter their CET rank plus a preferred branch and city, and the platform predicts realistic college matches based on historical cutoff data — so they can target the best-fit college for their rank instead of guessing. Live and in use by real KCET aspirants, built with a small team of students from Siddaganga Institute of Technology.', 'match_predicted · live')">
+        <div class="project-media">
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="detect-tag">match_predicted · live</span>
+          <img src="images/project-makemyseat.svg" alt="Make My Seat KCET prediction platform mockup">
+        </div>
+        <div class="project-body">
+          <span class="index">05 / internship</span>
+          <h3>Make My Seat</h3>
+          <p>KCET seat-allotment prediction platform — enter your rank, get realistic college &amp; branch matches. Built during my Technomedia internship.</p>
+          <div class="stack-row">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Team project</span>
+          </div>
+          <a class="more-link project-visit" href="https://makemyseat.technomediasoft.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Visit site ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card processing reveal" onclick="showProjectDetails('ShiftSync', 'A multi-tenant staff scheduling and shift-swap platform, built as the shared backend for a future web app plus Android and iOS clients. Handles business + employee accounts with JWT auth and role-based access (Owner / Manager / Employee), shift creation with double-booking and max-hours-per-week prevention, and a full swap-request flow — request, claim, manager approve/reject — with conflict re-validation at approval time. Backend (Phase 1 of 6) is built on Java 17, Spring Boot, and PostgreSQL, with clean JSON error responses across validation, not-found, conflict, and auth failures. Next up: a React + TypeScript frontend, then WebSocket updates and native Android/iOS apps.', 'phase 1/6 · backend live')">
+        <div class="project-media pending">
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="status-processing"><span class="blip"></span>phase 1/6 · backend live</span>
+          <div class="pending-glyph"><span class="big">{ }</span>Java · Spring Boot API</div>
+        </div>
+        <div class="project-body">
+          <span class="index">04 / in progress</span>
+          <h3>ShiftSync</h3>
+          <p>Multi-tenant shift scheduling &amp; swap-request REST API — JWT auth, role-based access, conflict-safe shift swaps. Backend is live; web + mobile clients are next.</p>
+          <div class="stack-row">
+            <span class="chip">Java 17</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">JWT</span>
+            <span class="chip">Maven</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="tight">
+  <div class="wrap">
+    <div class="contact-panel reveal">
+      <div>
+        <span class="tag">// want the full write-up?</span>
+        <h2>Ask me about the model architecture or the deployment.</h2>
+        <p>Happy to walk through the training pipeline, the dataset, or the Raspberry Pi deployment in more depth.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:hraj5143@gmail.com"><span class="k">EMAIL</span> hraj5143@gmail.com</a>
+        <a href="https://github.com/HemanthRajuKS" target="_blank" rel="noopener"><span class="k">GITHUB</span> HemanthRajuKS</a>
+        <a href="resume.html"><span class="k">RESUME</span> View full résumé</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-social">
+    <a href="https://github.com/HemanthRajuKS" target="_blank" rel="noopener">GitHub</a>
+    <span>·</span>
+    <a href="https://instagram.com/hemanthhraj_" target="_blank" rel="noopener">Instagram</a>
+    <span>·</span>
+    <a href="https://wa.me/919535601793" target="_blank" rel="noopener">WhatsApp</a>
+    <span>·</span>
+    <a href="https://linkedin.com/in/hemanth-raj-b5279a2a9" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  © 2026 Hemanth Raju K S — built with intention, not a template.
+</footer>
+
+<!-- Modal -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="tag" id="modalTag">PROJECT</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
+</body>
+</html>
